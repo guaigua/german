@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    
-<!-- Head -->
+
 <head>
     <title>German Guaigua | Portofolio </title>
     <!-- Required meta tags -->
@@ -12,84 +11,112 @@
     <!-- TEMPLATE INI DIBUAT OLEH  -->
     <meta name="developer" content="darthkishkumen">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="assets/css/styles.css">     
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+        integrity="sha256-gvEnj2axkqIj4wbYhPjbWV7zttgpzBVEgHub9AAZQD4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body>
-  
-        <header id="header">
-            <div></div>
-            <a href="https://api.whatsapp.com/send?phone=5543998352928" target="_blank">
-                <i>Whatsapp</i>
-            </a>
-            <div>
-                <div>
-                    <nav>                    
-                        <div>
-                            <ul>
-                                <li>
-                                    <a href="#home">Home</a>
-                                </li>                                
-                                <li>
-                                    <a href="#sobre">Sobre</a>
-                                </li>
-                                <li>
-                                    <a href="#educação">Educação</a>
-                                </li>
-                                <li>
-                                    <a href="#habilidades">Habilidades</a>
-                                </li>                           
-                                <li>
-                                   <a href="#experiências">Experiências</a>
-                                </li>                                                            
-                                <li>
-                                   <a href="#portfólio">Portfólio</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+    <header>
+        <div class="container">
+            <div class="logo">
+                German Ulises Guaigua Guacaran
+            </div>
+
+            <input class="hamburger-button" type="checkbox" id="hamburger-button" />
+            <label for="hamburger-button">
+                <div></div>
+            </label>
+
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>                                
+                        <li>
+                            <a href="#sobre">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#educação">Educação</a>
+                        </li>
+                        <li>
+                            <a href="#habilidades">Habilidades</a>
+                        </li>                           
+                        <li>
+                           <a href="#experiências">Experiências</a>
+                        </li>                                                            
+                        <li>
+                           <a href="#portfólio">Portfólio</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="buttons">
+                    <a href="/" class="button">Obter PDF</a>
                 </div>
             </div>
-        </header>
-
-        <!--
-        ===================
-            HOME 
-        ===================
-        -->
-
-        <section id="home">
-            <div>
-                <div>
-                    <div>
-                        <div>
-                            <div>
-                                <div>
-                                    <span>Hello I'm</span>
-                                </div>                                
-                                <h3>German Ulises Guaigua Guacaran</h3>
-                                <h4>Software Developer</h4>                                
-                                <ul>
-                                    <span><li><i></i>Full Name : German Ulises Guaigua Guacaran</li></span>                                     
-                                    <li><i></i>Address :  Curitiba, Paraná, Brasil</a></li>       
-                                    <li><i></i>Skype: gerguaigua</a></li>
-                                </ul>                                
-                                <ul>                                   
-                                    <li><a href="https://github.com/guaigua"><i></i></a></li>                                
-                                    <li><a href="https://ve.linkedin.com/in/guaigua/"><i></i></a></li>
-                                    <li><a href="https://gitlab.com/guaigua"><i></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div>
-                            <div>                         
-                                <img src="assets/images/eu.jpg">                            
-                            </div>
-                        </div>
+        </div>
+    </header>
+    <div class="page-content">
+        <section class="sobre" id="sobre">       
+                <h1>German Ulises Guaigua Guacaran</h1>
+                <h2>Full-Stack Developer</h2>
+                <p>Profissional de tecnologia da informação (TI) com sólida experiência em diferentes estágios 
+                    de desenvolvimento de software. Minha experiência foi orientada para atender às necessidades 
+                    e aumentar o valor agregado dos produtos do cliente final.</br>
+                    Domino vários conhecimentos sólidos em metodologias, técnicas e ferramentas associadas ao 
+                    desenvolvimento, arquitetura, design, testes de manutenção, continuidade operacional, 
+                    implementação subsequente, garantia de qualidade e procedimentos de gerenciamento de 
+                    equipamentos.</br>
+                    Sou especialista em software de código aberto, bancos de dados e gerenciamento de projetos.</p>      
+        </section>
+        <section class="contato" id="contato">
+            <div class="duascolunas">
+                <div class="col col2">
+                    <h2>Contato</h2>
+                </div>
+                <div class="col col2">
+                    <div class="container">                    
+                        <form action="#" class="form-contact" method="post" tabindex="1">
+                        <input type="text" class="form-contact-input" name="nome" placeholder="Nome" required />
+                        <input type="email" class="form-contact-input" name="email" placeholder="Email" required />
+                        <input type="tel" class="form-contact-input" name="tel" placeholder="Telefone" />
+                        <textarea class="form-contact-textarea" name="conteudo" placeholder="Deixe uma mensagem" required></textarea>
+                        <button type="submit" class="form-contact-button">Enviar</button>
+                        </form>
                     </div>
                 </div>
-            </div>
-        </section>   
+            </div>          
+        </section>
 
+    </div>
+        
+
+       
+
+    <footer>
+        Footer
+    </footer>
+
+    <script>
+        /*
+            THIS IS NOT NECESSARY ON REGULAR WEBSITES
+ 
+            If you're using a library like React, you'll need the mobile menu to close once a link has been clicked.
+            That's all the below code does.
+        */
+
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const headerLinks = document.querySelectorAll('header .container .menu a');
+
+        headerLinks.forEach((link) => {
+            link.addEventListener('click', (e) => hamburgerButton.checked = false);
+        })
+    </script>
 </body>
 
 </html>
