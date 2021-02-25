@@ -12,3 +12,4 @@ arr.forEach(function(element,index,arreglo){
     console.log(index);
     console.log(arreglo);
 });
+
