@@ -68,17 +68,17 @@ function complete_os_dados_do_repositório(dados){
     const lista = document.createElement('ul')
 
     for (dado of dados){
-        console.log(dado)
+        
         const linguagen = document.createElement('li')
         linguagen.textContent = dado.language      
         if (linguagen.textContent){
             lista.appendChild(linguagen)
+            const repo = document.createElement('li')
+            repo.textContent = dado.html_url 
+            lista.appendChild(repo)
         }
-        const linguagen = document.createElement('li')
-        linguagen.textContent = dado.language      
-        if (linguagen.textContent){
-            lista.appendChild(linguagen)
-        }
+       
+      
     
     }
     container.appendChild(lista)
