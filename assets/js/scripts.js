@@ -65,25 +65,23 @@ function obter_dados_do_repo() {
 function complete_os_dados_do_repositório(dados){
    
     const container = document.querySelector('#repos')
-    const lista = document.createElement('ul')
+    const lista = document.createElement('tr')
 
-        for (dado of dados){
-            var hilera = document.createElement("tr");
-            const linguagen = document.createElement('td')
-            linguagen.textContent = dado.language      
-            if (linguagen.textContent){
-                lista.appendChild(linguagen)
-                const repo = document.createElement('td')
-                repo.textContent = dado.html_url 
-                lista.appendChild(repo)
-            }
-            hilera.appendChild(lista);
+    for (dado of dados){
         
-        
-        
+        const linguagen = document.createElement('td')
+        linguagen.textContent = dado.language      
+        if (linguagen.textContent){
+            lista.appendChild(linguagen)
+            const repo = document.createElement('td')
+            repo.textContent = dado.html_url 
+            lista.appendChild(repo)
         }
-    container.appendChild(hilera)
+       
+      
+    
+    }
+    container.append(lista)
 }       
     
-
 obter_dados_do_repo()
