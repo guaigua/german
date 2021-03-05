@@ -14,7 +14,6 @@ headerLinks.forEach((link) => {
 
 
 
-
 //receber dados do github
 
 const API_BASE = 'https://api.github.com/users/guaigua';
