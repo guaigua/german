@@ -63,27 +63,23 @@ function obter_dados_do_repo() {
 
    
 function complete_os_dados_do_repositório(dados){
-  
-    const container = document.querySelector('#repos')
-    
-  
-    const lista = document.createElement('li')
    
+    const container = document.querySelector('#repos')
+    const lista = document.createElement('ul')
 
     for (dado of dados){
- 
-
-        const lang = document.createElement('li')
-        lang.textContent = dado.language
-        if (lang.textContent ){           
-                lista.appendChild(lang)
+        console.log(dado)
+        const linguagen = document.createElement('li')
+        linguagen.textContent = dado.language      
+        if (linguagen.textContent){
+            lista.appendChild(linguagen)
         }
-        const repo = document.createElement('a')
-        repo.textContent = dado.html_url
-        if (repo.textContent ){           
-                lista.appendChild(repo)
+        const linguagen = document.createElement('li')
+        linguagen.textContent = dado.language      
+        if (linguagen.textContent){
+            lista.appendChild(linguagen)
         }
-
+    
     }
     container.appendChild(lista)
 }       
