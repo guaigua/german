@@ -1,23 +1,23 @@
 const API_BASE = 'https://api.github.com/users/guaigua';
 
-function obter_artigos() {
-  const endpoint = 'articles'
+//receber dados do github
+
+function obter_dados_do_github() {
+  
   const url =  API_BASE
 
   let r = fetch(url)
-  r.then(function(response) {
-    console.log('Eu tem resposta')
-    console.log(response)
-
+  r.then(function(response) {   
+    
+    // imagem do portfólio
     var data = response.json()
-    .then(function (dadoArtigos){      
-      dadoArtigos.login
-      console.log( dadoArtigos.login);
+    .then(images => {            
+      var imageUrl = images.avatar_url;
+      console.log(imageUrl);
+      document.querySelector("#image").src = imageUrl;   
     })
-
-    console.log(data);
   })
 
 }
 
-obter_artigos()
+obter_dados_do_github()
