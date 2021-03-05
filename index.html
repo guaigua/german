@@ -309,8 +309,11 @@
                                     
                         <form id="myForm" class="form-contact" >
                             <input id="nome" type="text" class="form-contact-input" name="nome" placeholder="Nome" required />
+                            <div class="alert alert-danger d-none" role="alert" id="nomeOK"></div>
                             <input id="mail" type="mail" class="form-contact-input" name="email" placeholder="Email" required />
-                            <input id="cel" type="tel" class="form-contact-input" name="tel" placeholder="Telefone" />
+                            <div class="alert alert-danger d-none" role="alert" id="mailOK"></div>
+                            <input id="tel" type="tel" class="form-contact-input" name="tel" placeholder="Telefone" />
+                            <div class="alert alert-danger d-none" role="alert" id="telOK"></div>
                             <textarea id="conteudo"  class="form-contact-textarea" name="conteudo" placeholder="Deixe uma mensagem" required></textarea>
                             <button type="submit" class="form-contact-button">Enviar</button>
                         </form>                    

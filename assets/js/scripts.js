@@ -1,3 +1,50 @@
+//validando Nome
+document.getElementById('nome').addEventListener('input', function() {
+    campo = event.target;
+    valido = document.getElementById('nomeOK');
+        
+    nomeRegex = /^[A-Z]+$/i;
+    //Um texto é exibido em div só quando está errado
+    if (nomeRegex.test(campo.value)) {
+      valido.innerText = "Nome Válido";
+      document.getElementById("nomeOK").classList.add('d-none');
+    } else {
+      valido.innerText = "Nome incorreta";
+      document.getElementById("nomeOK").classList.remove('d-none');
+    }
+});
+
+//validando Mail
+document.getElementById('mail').addEventListener('input', function() {
+    campo = event.target;
+    valido = document.getElementById('mailOK');
+        
+    emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    //Um Mail é exibido em div só quando está errado
+    if (emailRegex.test(campo.value)) {
+      valido.innerText = "Mail Válido";
+      document.getElementById("mailOK").classList.add('d-none');
+    } else {
+      valido.innerText = "Mail incorreta";
+      document.getElementById("mailOK").classList.remove('d-none');
+    }
+});
+
+//validando Tel
+document.getElementById('tel').addEventListener('input', function() {
+    campo = event.target;
+    valido = document.getElementById('telOK');
+        
+    telRegex = /^[0-9,$]*$/;
+    //Um tel é exibido em div só quando está errado
+    if (telRegex.test(campo.value)) {
+      valido.innerText = "Número de telefone Ok";
+      document.getElementById("telOK").classList.add('d-none');
+    } else {
+      valido.innerText = "Número de telefone errado";
+      document.getElementById("telOK").classList.remove('d-none');
+    }
+});
 //menu de hambúrguer
 
 const hamburgerButton = document.getElementById('hamburger-button');
@@ -85,3 +132,15 @@ function complete_os_dados_do_repositório(dados){
 }       
     
 obter_dados_do_repo()
+
+
+
+function limpa_formulário_cep() {
+    //Limpa valores do formulário de cep.
+    document.getElementById('nome').value=("");
+    document.getElementById('mail').value=("");
+    document.getElementById('tel').value=("");
+    document.getElementById('idade').value=("");
+    document.getElementById('conteudo').value=(""); 
+
+}
