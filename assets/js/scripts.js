@@ -7,14 +7,6 @@ headerLinks.forEach((link) => {
     link.addEventListener('click', (e) => hamburgerButton.checked = false);
 })
 
-var arr = [ 'a', 'b', 'c', 'd'];
-
-arr.forEach(function(element,index,arreglo){
-    console.log(element);
-    console.log(index);
-    console.log(arreglo);
-});
-
 const API_BASE = 'https://api.github.com/users/guaigua';
 
 //receber dados do github
@@ -26,15 +18,38 @@ function obter_dados_do_github() {
   let r = fetch(url)
   r.then(function(response) {   
     
-    // imagem do portfólio
+    
     var data = response.json()
-    .then(images => {            
-      var imageUrl = images.avatar_url;
-      console.log(imageUrl);
-      document.querySelector("#hero-img").src = imageUrl;   
-    })
-  })
 
-}
+    // nome do portfólio
+    .then(preencher_os_dados_do_portfólio)
+    
+    //nome =>{
+     //   var nomeTitle = nome.name;
+      //  console.log(nomeTitle);
+     // })
+
+    // imagem do portfólio
+    //.then(images => {            
+    //    var imageUrl = images.avatar_url;
+    //     document.querySelector("#hero-img").src = imageUrl;   
+    //})
+    })
+  }
+
+  function preencher_os_dados_do_portfólio(dados){
+
+    // nome do portfólio
+    var nomeTitle = dados.name;  
+    let text = document.createTextNode(`${nomeTitle}`);
+    nome.appendChild(text);
+    fullnome.appendChild(text);
+     // imagem do portfólio
+    var imageUrl =  dados.avatar_url;
+    document.querySelector("#hero-img").src = imageUrl;
+    console.log(imageUrl);
+
+  }
+
 
 obter_dados_do_github()
