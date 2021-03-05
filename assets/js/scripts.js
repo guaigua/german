@@ -7,9 +7,18 @@ headerLinks.forEach((link) => {
     link.addEventListener('click', (e) => hamburgerButton.checked = false);
 })
 
-const API_BASE = 'https://api.github.com/users/guaigua';
+//
+
+
+
+
+
+
 
 //receber dados do github
+
+const API_BASE = 'https://api.github.com/users/guaigua';
+
 
 function obter_dados_do_github() {
   
@@ -42,7 +51,7 @@ function obter_dados_do_github() {
     // nome do portfólio
     var nomeTitle = dados.name;  
     let text = document.createTextNode(`${nomeTitle}`);
-    nome.appendChild(text);
+    headernome.appendChild(text);
     fullnome.appendChild(text);
      // imagem do portfólio
     var imageUrl =  dados.avatar_url;
@@ -51,5 +60,4 @@ function obter_dados_do_github() {
 
   }
 
-
-obter_dados_do_github()
+  obter_dados_do_github();
