@@ -59,22 +59,33 @@ function obter_dados_do_repo() {
     })
 }
 
-obter_dados_do_repo()
 
+
+   
 function complete_os_dados_do_repositório(dados){
-    console.log(dados);
+  
     const container = document.querySelector('#repos')
-    const lista = document.createElement('ul')
+    
+  
+    const lista = document.createElement('li')
+   
 
     for (dado of dados){
-        const li = document.createElement('li')
-        li.textContent = dado.name
-        lista.appendChild(li)
-        console.log(dado.name);
-        console.log(dado.description);
-        console.log(dado.language)
-        console.log(dado.html_url)
+ 
+
+        const lang = document.createElement('li')
+        lang.textContent = dado.language
+        if (lang.textContent ){           
+                lista.appendChild(lang)
+        }
+        const repo = document.createElement('a')
+        repo.textContent = dado.html_url
+        if (repo.textContent ){           
+                lista.appendChild(repo)
+        }
+
     }
     container.appendChild(lista)
-}
+}       
+    
 
